@@ -10,6 +10,6 @@ describe('Given I am on the product page', () => {
   it("Users should be able to sort by Name A - Z", function(){
     cy.get(Login.usernameField).type(Login.username)
     cy.get(Login.passwordField).type(Login.password)
-    cy.click(Login.loginBtn).click()
+    cy.get(Login.loginBtn).click()
     })
   })
