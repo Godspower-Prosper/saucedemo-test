@@ -7,8 +7,8 @@ module.exports = defineConfig({
     },
     "defaultCommandTimeout": 8000,
     "pageLoadTimeout": 200000,
-    viewportWidth: 1900,
-    viewportHeight: 1080,
+    // viewportWidth: 1900,
+    // viewportHeight: 1080,
     baseUrl: 'https://www.saucedemo.com/',
   },
 });
