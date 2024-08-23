@@ -1,0 +1,169 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-23T17:22:45.538Z",
+    "end": "2024-08-23T17:26:14.093Z",
+    "duration": 208555,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "0fb0dfd8-2eb9-4ea5-87fb-13bbacb67b21",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.js",
+      "file": "cypress\\e2e\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b381a1eb-357a-489d-ba1e-7351f5c8ada8",
+          "title": "Given I am on the product page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify user can login",
+              "fullTitle": "Given I am on the product page Verify user can login",
+              "timedOut": null,
+              "duration": 5539,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();",
+              "err": {},
+              "uuid": "f9e948b5-1bdb-4f98-baae-c1737cb235a8",
+              "parentUUID": "b381a1eb-357a-489d-ba1e-7351f5c8ada8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify user can sort by Name A - Z",
+              "fullTitle": "Given I am on the product page Verify user can sort by Name A - Z",
+              "timedOut": null,
+              "duration": 1629,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();\ncy.contains('Name (A to Z)').should(\"be.visible\");",
+              "err": {},
+              "uuid": "7340b646-022b-4fc6-81ea-f0de3e9e2106",
+              "parentUUID": "b381a1eb-357a-489d-ba1e-7351f5c8ada8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify user can change the sort sorting by Name (Z - A)",
+              "fullTitle": "Given I am on the product page Verify user can change the sort sorting by Name (Z - A)",
+              "timedOut": null,
+              "duration": 200837,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();\ncy.get(Login.sortBtn).select('Name (Z to A)');\ncy.contains('Name (Z to A)').should(\"be.visible\");",
+              "err": {
+                "message": "CypressError: Timed out after waiting `200000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `200000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Given I am on the product page`",
+                "estack": "CypressError: Timed out after waiting `200000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `200000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Given I am on the product page`\n    at timedOutWaitingForPageLoad (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:130946:64)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:131931:16)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://saucedemo-test/./cypress/e2e/Login.cy.js:8:11)",
+                "diff": null
+              },
+              "uuid": "801c13a5-6d58-4c7e-9129-073d99ec78a9",
+              "parentUUID": "b381a1eb-357a-489d-ba1e-7351f5c8ada8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that items are sorted correctly",
+              "fullTitle": "Given I am on the product page Verify that items are sorted correctly",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();\ncy.wait(5000);\ncy.get(Login.sortBtn).select('Name (Z to A)');\ncy.wait(5000);\ncy.contains('Name (Z to A)').should(\"be.visible\");\ncy.wait(5000);\ncy.contains('Test.allTheThings() T-Shirt (Red)').should(\"be.visible\");",
+              "err": {},
+              "uuid": "cb1860d0-8b18-4f2a-8ec7-9cb32e236727",
+              "parentUUID": "b381a1eb-357a-489d-ba1e-7351f5c8ada8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9e948b5-1bdb-4f98-baae-c1737cb235a8",
+            "7340b646-022b-4fc6-81ea-f0de3e9e2106"
+          ],
+          "failures": [
+            "801c13a5-6d58-4c7e-9129-073d99ec78a9"
+          ],
+          "pending": [],
+          "skipped": [
+            "cb1860d0-8b18-4f2a-8ec7-9cb32e236727"
+          ],
+          "duration": 208005,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "test-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "test-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
